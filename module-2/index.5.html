@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vuejs is awesome</title>
+    <script src="vue.js"></script>
+    <style>
+        .demo {
+            width: 100px;
+            height: 100px;
+            background: grey;
+            display: inline-block;
+            margin: 10px; }
+        .red {
+            background-color: red; }
+        .green {
+            background-color: green; }
+        .blue {
+            background-color: blue; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div 
+        class="demo"
+        @click="attachRed = !attachRed"
+        :class="divClasses"
+        ></div>
+        <div class="demo" :class="{red: attachRed}"></div>
+        <div class="demo"></div>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                attachRed: false
+            },
+            computed: {
+                divClasses: function() {
+                    return {
+                        red: this.attachRed,
+                        blue: !this.attachRed
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
