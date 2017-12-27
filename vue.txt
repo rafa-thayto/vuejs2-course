@@ -1,4 +1,5 @@
 el: connect to DOM
 data: store the data to be used
-method: methods of this Vue instance
+methods: methods of this Vue instance
 computed: dependent properties
+watch: execute code upon data changes
