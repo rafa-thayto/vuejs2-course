@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vuejs is awesome</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="name">
+        <p>{{name}}</p>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'Rafael'
+            }
+        });
+    </script>
+</body>
+</html>
