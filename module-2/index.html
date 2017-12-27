@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vuejs is awesome</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Counter -->
+        <!-- $(qlq coisa) quando se utiliza dólar em um param,
+             você está dizendo que ele é protected -->
+        <button @click="increase(2, $event)">Increase</button>
+        <button @click="decrement(2, $event)">Decrement</button>
+        <p>{{counter}}</p>
+
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Hello World',
+                counter: 0
+            },
+            methods: {
+                increase: function(step, event) {
+                    this.counter += step;
+                },
+                decrement: function(step, event) {
+                    this.counter -= step;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
