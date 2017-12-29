@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vuejs is awesome</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(ingredient, i) in ingredients">
+                {{ingredient}} ({{i}})
+            </li>
+        </ul>
+        <template v-for="(ingredient, index) in ingredients">
+            <h1>{{ingredient}}</h1>
+            <p>{{index}}</p> 
+        </template>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                ingredients: ['meat', 'fruit', 'cookies'],
+                persons: [
+                    {name: 'Rafael', age: 17, color: 'red'},
+                    {name: 'Giovanna', age: 'unknown', color: 'blue'}
+                ]
+            },
+        });
+    </script>
+</body>
+</html>
