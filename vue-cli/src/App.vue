@@ -1,15 +1,9 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <app-server-status></app-server-status>
 </template>
 
 <script>
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Hello World!'
-    }
-  }
 }
 </script>
 
